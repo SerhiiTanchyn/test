@@ -19,5 +19,6 @@ rebuild:
 	echo "Project rebuilt successfully!"
 
 test:
+	docker-compose exec php ./bin/setup-test-db
 	docker-compose exec php bin/phpunit
 	echo "Tests executed successfully!"
